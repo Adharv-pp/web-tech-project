@@ -1,0 +1,176 @@
+<html>
+<title> ABC NEWS-EARTH</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        a:link{
+        color:rgb(1, 2, 24)
+        }
+        a:visited {
+        color:rgb(1, 4, 26);
+        }
+        
+        a:hover{
+        color:rgb(107, 101, 105);
+        }
+        
+        a:active{
+        color:rgb(247, 154, 16);
+        }
+        .main {
+        border: 5px outset rgb(24, 18, 18);
+        background-color: rgb(231, 235, 236);    
+        text-align: center;
+}
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  border: 2px outset rgb(74, 69, 69);
+  background-color: #f1f1f1;
+  height: 300px; 
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #323131;
+}
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 68px;
+  text-decoration: none;
+}
+
+
+.topnav a:hover 
+{
+  background-color: #ddd;
+  color: black;
+}
+.proverb-button {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 40px;
+            padding: 20px;
+            max-width: 500px;
+            background-color: #cec8c8;
+            text-align: center;
+            box-shadow: 4px 4px 8px rgb(36, 34, 34);
+        }
+      
+        .proverb-button button {
+            padding: 12px 20px;
+            background-color: #323131;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            font-size: 18px;
+            
+        }
+
+        .proverb-button button:hover {
+            background-color: #555;
+            
+        }
+
+        .proverb-button p {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+ @media screen and (max-width:100px)
+ {
+  .column 
+  {
+    width: 100%;
+  }
+}
+    </style>
+</head> 
+<body bgcolor="white" text="black">
+    <p align ="center"><img src="abc.jpg" width="100"height="35"></p><hr>
+    <font size="4" face="BBC Reith Sans">
+      <div class="topnav">
+        <a href="http://localhost/demo/HTML/CIA%20project%20BBC.php">HOME</a>
+        <a href="http://localhost/demo/HTML/sports.html">SPORTS</a>
+        <a href="http://localhost/demo/HTML/BUSINESS.html">BUSINESS</a>
+        <a href="http://localhost/demo/HTML/innovation.html">INNOVATION</a>
+        <a href="http://localhost/demo/HTML/culture.html">CULTURE</a>
+        <a href="http://localhost/demo/HTML/travel.html">TRAVEL</a>
+        <a href="http://localhost/demo/HTML/earth.html">EARTH</a>
+      </div><hr>
+
+    <font size="5" face="BBC REITH SANS">
+        <div class="main">
+            <div class="TS">EARTH</div>
+        </div>
+<p><center><img src="earth1.png" width="1200"height="500"></center></p><hr>
+<p><center><img src="earth2.png" width="1200"height="500"></center></p><hr>
+<p><center><img src="earth3.png" width="1600"height="400"></center></p>
+
+
+<article>
+    <h2 style="font-size: 25px;">'My two favourite animals are sheep and wolves'. In Portugal’s Montesinho, shepherds peacefully coexist alongside wolves</h2>
+    <p style="font-size: 16px;">"My two favourite animals are sheep and wolves," says Miguel Afonso as he looks over his flock of 200 sheep bleating and grazing on the gently rolling hills surrounding the village of Rio de Onor in northeastern Portugal. Holding his sturdy crook, the 34-year-old shepherd doesn't see his love for wolves as inconsistent with his work. In the region of Montesinho, shepherds, sheep and wolves have coexisted for centuries.
+        "Wolves have caused me no trouble," says Afonso while patting one of his six guard dogs, which protect his flock from attacks. "The wolves are actually helping me because they are hunting deer and boar, which damage my chestnut and grain plantations."</p>
+    <p style="font-size: 16px;">Declared a protected area in 1979, the plateaus, mountain ranges and valleys of Montesinho in northern Portugal have long been a refuge for the Iberian wolf (Canis lupus signatus), an endangered subspecies of the European grey wolf. Connectivity with packs across the border in Spain and the availability of wild prey between the trees and meandering rivers have helped maintain stable wolf populations in this region.
+        "I've seen many wolves here, and I've seen them hunt deer," says Afonso.
+    </p><BR>
+  </article>
+
+  <br><br>
+<div class="proverb-button" style="float: left;">
+  <p>Click the button to display the Proverbs for the day.</p>
+
+<button onclick="myFunction()">Try me</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var day;
+  switch (new Date().getDay()) {
+    case 0:
+      day = "A gentle answer turns away wrath, but a harsh word stirs up anger<br>Source: Proverbs 15:1";
+      break;
+    case 1:
+      day = "And speak to people good words.<br>Source: Quran 2:83";
+      break;
+    case 2:
+      day = "You have the right to perform your prescribed duties, but you are not entitled to the fruits of your actions.<br>Source: Bhagavad Gita 2:47";
+      break;
+    case 3:
+      day = "Love your neighbor as yourself.<br>Source: Leviticus 19:18";
+      break;
+    case 4:
+      day = "Let us live happily then, not hating those who hate us! Among those who hate us, let us dwell free from hate.<br>Source: Dhammapada 197";
+      break;
+    case 5:
+      day = "He who has no faith in himself can never have faith in God.<br>Source: Guru Granth Sahib, Ang 645";
+      break;
+    case  6:
+      day = "A journey of a thousand miles begins with a single step.<br>Source: Tao Te Ching, Chapter 64";
+      break;
+    default:
+      day = "Unknown Day";
+  }
+  document.getElementById("demo").innerHTML = "Proverb for the day -<br> " + day;
+}
+
+</script>
+</div>
+<hr>
+<br>
+<p><marquee><center><font size="5"><a href="file:///C:/Users/Adharv%20p%20p/OneDrive/Pictures/HTML/CIA%20project%20BBC.html" style="text-decoration:none";> HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME HOME  </a></center></p></marquee><hr>
+<center><img src="abc.jpg" width="100"height="35"></center><br>
+<center><img src="THE END (first page).png" width="1000"height="200"></center><hr><hr>
+</font>
+</body>
+</html>

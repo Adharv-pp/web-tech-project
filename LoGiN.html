@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #333;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #859e85;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #2f3c2f;
+        }
+
+        .register-button {
+    width: 100%;
+    padding: 10px 2px 10px 0px;
+    margin: 8px 0;
+    margin-right: 12px;
+    background-color: #047539;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;
+}
+
+
+        .register-button:hover {
+            background-color: #244c18;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 20px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (email === "") {
+                alert("Email is required");
+                return false;
+            } else if (!emailPattern.test(email)) {
+                alert("Invalid email format");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Password is required");
+                return false;
+            } else if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <img src="abc.jpg" width="300" height="100">
+        <form action="process_form.php" method="POST" onsubmit="return validateForm();">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value="">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" value="">
+
+            <input type="submit" name="insert" value="CONTINUE">
+            <input type="reset" value="RESET">
+
+            DON'T HAVE AN ABC ACCOUNT?
+            <a href="Register.html" class="register-button">REGISTER</a>
+        </form>
+    </center>
+</body>
+</html>

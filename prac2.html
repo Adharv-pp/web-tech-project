@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Railway Time Greeting</h2>
+
+<p>Enter the railway time (in hours): <input type="number" id="railwayTime"></p>
+
+<p id="demo"></p>
+
+<script>
+let inputHour=14;
+let greeting;
+
+if (inputHour >= 6 && inputHour < 12) {
+    greeting = "Good morning";
+} else if (inputHour >= 12 && inputHour < 18) {
+    greeting = "Good evening";
+} else {
+    greeting = "Good night";
+}
+
+document.getElementById("demo").innerHTML = greeting;
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Statements</h1>
+<h2>The if...else Statements</h2>
+
+<img id="myImage" onclick="changeImage()" src="" width="100" height="180">
+
+<p>Click the light bulb to turn on/off the light.</p>
+
+<script>
+function changeImage() {
+  var image = document.getElementById("myImage");
+  if (image.src.match("bulbon")) 
+  {
+    image.src = "Screenshot 2024-09-03 145432.png";
+  } 
+  else 
+  {
+    image.src = "Screenshot 2024-09-03 145443.png";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        label, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="date"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Employee Information Form</h2>
+    <form action="class2php.php" method="post">
+        <label for="empid">Employee ID:</label>
+        <input type="text" id="empid" name="empid" required>
+<br>
+        <label for="empname">Employee Name:</label>
+        <input type="text" id="empname" name="empname" required>
+<br>
+        <label for="empdob">Date of Birth:</label>
+        <input type="date" id="empdob" name="empdob" required>
+<br>
+        <label for="empdesignation">Designation:</label>
+        <input type="text" id="empdesignation" name="empdesignation" required>
+<br>
+        <label for="empdoj">Date of Joining:</label>
+        <input type="date" id="empdoj" name="empdoj" required>
+<br>
+        <input type="submit" name="action" value="Submit">
+        <input type="submit" name="action" value="Update">
+        <input type="submit" name="action" value="Delete">
+    </form>
+</body>
+</html>

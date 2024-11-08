@@ -1,0 +1,127 @@
+<html>
+<head>
+    <title>Register Form</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #333;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            background-color: #047827;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #19480a;
+        }
+
+        input[type="reset"] {
+            background-color: #5b0404;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #a52a2a;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 20px;
+        }
+    </style>
+    <script>
+        function validateRegistrationForm() {
+            var fullname = document.getElementById("fullname").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (fullname === "") {
+                alert("Fullname is required");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Email is required");
+                return false;
+            } else if (!emailPattern.test(email)) {
+                alert("Invalid email format");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Password is required");
+                return false;
+            } else if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <img src="abc.jpg" width="300" height="100">
+        <form action="register_form.php" method="POST" onsubmit="return validateRegistrationForm();">
+            <label for="fullname">Fullname:</label>
+            <input type="text" id="fullname" name="fullname" value="">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" value="">
+
+            <input type="hidden" name="insert" value="1"> <!-- This is the hidden field -->
+
+            <div class="button-container">
+                <input type="submit" value="REGISTER">
+                <input type="reset" value="RESET">
+            </div>
+        </form>
+    </center>
+</body>
+</html>

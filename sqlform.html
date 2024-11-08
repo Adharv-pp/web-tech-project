@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+    <center>
+        <h2>Student Registration Form</h2>
+        <form action="sql.php" method="POST">
+            <label for="std1_reg_no">Registration Number:</label><br>
+            <input type="text" id="std1_reg_no" name="std1_reg_no" required><br><br>
+            <label for="std1_name">Name:</label><br>
+            <input type="text" id="std1_name" name="std1_name" required><br><br>
+            <label for="std1_course">Course:</label><br>
+            <input type="text" id="std1_course" name="std1_course" required><br><br>
+            <label for="std1_marks">Marks:</label><br>
+            <input type="number" id="std1_marks" name="std1_marks" required><br><br>
+            <input type="submit" name="insert" value="Insert">
+            <input type="submit" name="update" value="Update">
+            <input type="submit" name="delete" value="Delete">
+        </form>
+    </center>
+</body>
+</html>

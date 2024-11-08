@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Christ University</title>
+</head>
+
+<body>
+
+    <h2>Text here</h2>
+
+    <input type="text" id="type" onkeydown="keydownevent()" />
+
+    <script>
+        function keydownevent() {
+            let input = document.getElementById("type").value;
+            let words = input.split(" ");
+            for (let word of words) {
+                if (word === word.toUpperCase() && word.length > 1)
+                 {
+                    alert("Caps Lock word detected: " + word);
+                    break;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Events</title>
+</head>
+
+<body onload="window.alert('Page successfully loaded');">
+
+    <script>
+        document.write("The page is loaded successfully");
+    </script>
+
+</body>
+
+</html>

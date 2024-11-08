@@ -1,0 +1,123 @@
+default arguments
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class User 
+{
+private:
+    string name;
+    string address;
+    string phoneNumber;
+
+public:
+    
+    User(string name = "unknown", string address = "unknown", string phoneNumber = "unknown")
+        : name(name), address(address), phoneNumber(phoneNumber) {}
+
+    void enterDetails() 
+    {
+        cout << "\nEnter your name: ";
+        getline(cin, name);
+        if (name.empty()) name = "unknown"; 
+
+        cout << "\nEnter your address: ";
+        getline(cin, address);
+        if (address.empty()) address = "unknown"; 
+
+        cout << "\nEnter your phone number: ";
+        getline(cin, phoneNumber);
+        if (phoneNumber.empty()) phoneNumber = "unknown"; 
+    }
+
+    void displayDetails() 
+    {
+        cout << "\nUser Details:" << endl;
+        cout << "Name: " << (name.empty() ? "unknown" : name) << endl;
+        cout << "Address: " << (address.empty() ? "unknown" : address) << endl;
+        cout << "Phone Number: " << (phoneNumber.empty() ? "unknown" : phoneNumber) << endl;
+    }
+};
+
+class FoodOrderingSystem
+{
+public:
+    void displayMenu() 
+    {
+        cout << "\nMENU:\n";
+        cout << "1. Masala dosa - rs 80\n";
+        cout << "2. Upma - rs 50\n";
+        cout << "3. Idli - rs 30\n";
+        cout << "4. Vada - rs 45\n";
+        cout << "5. Biriyani - rs 120\n";
+    }
+
+    double getPrice(int choice) 
+    {
+        switch (choice) 
+        {
+            case 1: return 80;
+            case 2: return 50;
+            case 3: return 30;
+            case 4: return 45;
+            case 5: return 120;
+            default: return 0.0;
+        }
+    }
+};
+
+int main()
+{
+    User user; 
+    FoodOrderingSystem fos;
+    char choice;
+    int foodChoice;
+    double price;
+
+    while (true) 
+    {
+        cout << "\nWelcome to the Food Ordering System" << endl;
+        cout << "1. Enter User Details" << endl;
+        cout << "2. Order Food" << endl;
+        cout << "3. Exit" << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+        cin.ignore();  
+
+        if (choice == '1') 
+        {
+            user.enterDetails();
+            user.displayDetails();
+        } 
+        else if (choice == '2') 
+        {
+            fos.displayMenu();
+            cout << "\nEnter the number of the item you want to order: ";
+            cin >> foodChoice;
+            price = fos.getPrice(foodChoice);
+            if (price > 0)
+            {
+                cout << "\nYour total is: rs " << price << endl;
+                cout << "\nThank you for your order!\n";
+            }
+            else 
+            {
+                cout << "Invalid choice. Please try again.\n";
+            }
+        } 
+        else if (choice == '3') 
+        {
+            cout << "Exiting the system." << endl;
+            break;
+        } 
+        else
+        {
+            cout << "Please enter 1, 2, or 3." << endl;
+        }
+    }
+
+    return 0;
+}
